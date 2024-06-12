@@ -12,8 +12,11 @@ export const TaskCard = (props: Props) => {
     return(
         <div className="grid grid-cols-12 grid-rows-1 gap-3">
             <div className="col-span-10">
-                <div className="flex space-x-3 items-center">
-                    <input className="border-gray-300 rounded w-4 h-4" type="checkbox" disabled={(date.isBefore(today) ? true : false)} onChange={checked} defaultChecked={props.checked}/>
+                <div className="flex space-x-3 items-start content-start">
+                    <div>
+                        <input type="checkbox" id={props.id} disabled={(date.isBefore(today) ? true : false)} onChange={checked} checked={props.checked}/>
+                        <label htmlFor={props.id}></label>
+                    </div>
                     <div className="grid grid-rows-2">
                         <p className='text-slate-600 font-semibold text-md'>{props.name}</p>
                         <p className='text-slate-600 text-md'>{props.description}</p>

@@ -25,14 +25,15 @@ function App() {
 
   const checked = (id: string) => {
     setToDos(prevState => prevState.map(task => {
-      if (task.id === id) {
+      if (task.id == id) {
           return {
               ...task,
               isCompleted: !task.isCompleted,
           }
       }
-      return task
-  }));
+
+      return task;
+    }));
   }
 
   return (
