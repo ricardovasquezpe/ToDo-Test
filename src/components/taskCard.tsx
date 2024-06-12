@@ -1,4 +1,4 @@
-import moment from 'moment/min/moment-with-locales';
+import moment from 'moment'
 
 export const TaskCard = (props: Props) => {
     var date = moment(props.date);
@@ -12,7 +12,7 @@ export const TaskCard = (props: Props) => {
     return(
         <div className="grid grid-cols-12 grid-rows-1 gap-3">
             <div className="col-span-10">
-                <div className="flex space-x-3 items-start content-start">
+                <div className="flex space-x-1 items-start content-start">
                     <div>
                         <input type="checkbox" id={props.id} disabled={(date.isBefore(today) ? true : false)} onChange={checked} checked={props.checked}/>
                         <label htmlFor={props.id}></label>

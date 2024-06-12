@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Task } from './models/task.model';
 import { useForm } from "react-hook-form";
 import { TaskCard } from './components/taskCard';
-import moment from 'moment/min/moment-with-locales';
+import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   const checked = (id: string) => {
     setToDos(prevState => prevState.map(task => {
-      if (task.id == id) {
+      if (task.id === id) {
           return {
               ...task,
               isCompleted: !task.isCompleted,

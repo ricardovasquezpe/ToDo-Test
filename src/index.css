@@ -43,7 +43,7 @@ input[type="checkbox"]:checked + label::after {
     height: 2.5ex;
     width: 2.5ex;
     background-color: white;
-    border: 2px gray solid;
+    border: 1px gray solid;
     border-radius: 4px;
     margin-right: 0.5em;
  }
